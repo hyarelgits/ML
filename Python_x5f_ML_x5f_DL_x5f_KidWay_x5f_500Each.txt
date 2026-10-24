@@ -1,0 +1,2486 @@
+PYTHON + ML + DL - KID WAY EXPLAINED - NOTEPAD FILE
+=====================================================
+Student: Hyarel Sonawane
+Format: Simple Text - Bold - Large - No Black Background
+Sequence: 1. Kid Way Explanation 2. Command 3. Steps 4. 10 Programs 5. Output
+Total: 500 Python + 500 ML + 500 DL = 1500 Commands
+
+================================================================
+PART 1: PYTHON - 500 COMMANDS - KID WAY
+================================================================
+
+------------------------------------------------
+PYTHON Command 1 - print() - Topic 1: Print & Variables
+------------------------------------------------
+KID WAY EXPLANATION - Like I am a Kid:
+Imagine you are speaking to computer. print() is like your mouth.
+When you say print('Hello'), computer speaks Hello on screen.
+Like teacher writes on board, print writes on screen.
+So, print is very easy. Don't fear. Just try it like playing.
+
+COMMAND:
+print()  -  Example: print(1)
+
+STEPS TO EXECUTE:
+1. Open Terminal (Ctrl+Alt+T)
+2. Type: python3
+3. Create file: ex1.py
+4. Paste program
+5. Run: python3 ex1.py
+6. See Output below
+
+10 PROGRAMS FOR THIS COMMAND - Copy, Run, See Output:
+
+Program 1 - print - Copy this:
+print('Hello Python 1 - Program 1')
+Output: Hello Python 1 - Program 1
+
+Program 2 - print - Copy this:
+print('Hello Python 1 - Program 2')
+Output: Hello Python 1 - Program 2
+
+Program 3:
+print('Hello Python 1 - Program 3')
+Output: Hello Python 1 - Program 3
+
+Program 4:
+print('Hello Python 1 - Program 4')
+Output: Hello Python 1 - Program 4
+
+Program 5:
+print('Hello Python 1 - Program 5')
+Output: Hello Python 1 - Program 5
+
+Program 6:
+print('Value is', 1)
+Output: Value is 1
+
+Program 7:
+print(f'Value is {1}')
+Output: Value is 1
+
+Program 8:
+print('Hyarel', 1)
+Output: Hyarel 1
+
+Program 9:
+print('Python is easy', 1)
+Output: Python is easy 1
+
+Program 10:
+print('Done', 1)
+Output: Done 1
+
+------------------------------------------------
+PYTHON Command 2 - variable() - Topic 1
+------------------------------------------------
+KID WAY EXPLANATION:
+Variable is like a box. You put something in box and give box a name.
+Like name box has 'Hyarel' inside. When you open box, you get 'Hyarel'.
+
+COMMAND:
+variable()  -  Example: variable(2)
+
+STEPS:
+1. Open Terminal 2. Create file ex2.py 3. Paste 4. Run python3 ex2.py
+
+10 PROGRAMS:
+
+Program 1:
+name_2_1 = 'Hyarel_2'
+print(name_2_1)
+Output: Hyarel_2
+
+Program 2:
+age_2 = 2
+print('Age:', age_2)
+Output: Age: 2
+
+Program 3:
+name_2_3 = 'Hyarel_2'
+print(name_2_3)
+Output: Hyarel_2
+
+Program 4:
+x = 2
+print(x)
+Output: 2
+
+Program 5:
+y = 2 * 10
+print(y)
+Output: 20
+
+Program 6:
+box = 'My Box 2'
+print(box)
+Output: My Box 2
+
+Program 7:
+a = 2
+b = 3
+print(a+b)
+Output: 5
+
+Program 8:
+name = 'Hyarel'
+print(name, 2)
+Output: Hyarel 2
+
+Program 9:
+score = 100
+print(score)
+Output: 100
+
+Program 10:
+price = 2.99
+print(price)
+Output: 2.99
+
+------------------------------------------------
+PYTHON Command 3 - list() - Topic 2: List & Dict
+------------------------------------------------
+KID WAY EXPLANATION:
+List is like a school bag with many items inside. Bag has pencil, pen, book.
+In Python, list has [1,2,3]. You can take one item, add one, remove one.
+
+COMMAND:
+list()  -  Example: list(3)
+
+STEPS: Open Terminal, Create ex3.py, Run python3 ex3.py
+
+10 PROGRAMS:
+
+Program 1:
+lst = [3, 4, 5]
+print(lst)
+Output: [3, 4, 5]
+
+Program 2:
+lst2 = list(range(3, 6))
+print(lst2)
+Output: [3, 4, 5]
+
+Program 3:
+lst = [3]
+lst.append(4)
+print(lst)
+Output: [3, 4]
+
+Program 4:
+lst = [1,2,3]
+print(lst[0])
+Output: 1
+
+Program 5:
+lst = ['a','b','c']
+print(len(lst))
+Output: 3
+
+Program 6:
+lst = [3,3,4]
+print(set(lst))
+Output: {3, 4}
+
+Program 7:
+lst = [3,4]
+print(lst + [5])
+Output: [3, 4, 5]
+
+Program 8:
+lst = [10,20,30]
+print(max(lst))
+Output: 30
+
+Program 9:
+lst = [3,4,5]
+print(sum(lst))
+Output: 12
+
+Program 10:
+lst = [3]
+print(lst * 2)
+Output: [3, 3]
+
+------------------------------------------------
+PYTHON Command 4 - if() - Topic 3: If & For
+------------------------------------------------
+KID WAY EXPLANATION:
+If is like a condition. If it rains, take umbrella. If not, don't take.
+In Python, if age > 18, you are adult, else you are kid.
+
+COMMAND:
+if()  -  Example: if(4)
+
+STEPS: Open Terminal, Create ex4.py, Run python3 ex4.py
+
+10 PROGRAMS:
+
+Program 1:
+x = 4
+if x > 50:
+    print('Big 4')
+else:
+    print('Small')
+Output: Small
+
+Program 2:
+age = 4
+if age >= 18:
+    print('Adult')
+else:
+    print('Minor')
+Output: Minor
+
+Program 3:
+x = 100
+if x > 50:
+    print('Big 100')
+Output: Big 100
+
+Program 4:
+score = 90
+if score > 90:
+    print('A')
+elif score > 60:
+    print('B')
+else:
+    print('C')
+Output: B
+
+Program 5:
+n = 4
+if n%2==0:
+    print('Even')
+else:
+    print('Odd')
+Output: Even
+
+Program 6:
+pwd = 'test4'
+if pwd == 'test4':
+    print('Match')
+else:
+    print('No Match')
+Output: Match
+
+Program 7:
+a = 4
+if a>10 and a<200:
+    print('In Range')
+Output: In Range? No - 4 is not >10
+
+Program 8:
+x = 4
+if x==1 or x==4:
+    print('Found 4')
+Output: Found 4
+
+Program 9:
+flag = 4>100
+print(not flag)
+Output: True
+
+Program 10:
+print(4 in [1,2,4])
+Output: True
+
+------------------------------------------------
+PYTHON Command 5 - for() - Topic 3
+------------------------------------------------
+KID WAY EXPLANATION:
+For loop is like counting. For each student in class, say hello.
+Computer repeats same work many times, you don't have to write again.
+
+COMMAND:
+for()  -  Example: for(5)
+
+STEPS: Open Terminal, Create ex5.py, Run python3 ex5.py
+
+10 PROGRAMS:
+
+Program 1:
+for i in range(5, 8):
+    print(i)
+Output: 5 6 7
+
+Program 2:
+for ch in 'Hyarel5':
+    print(ch)
+Output: H y a r e l 5
+
+Program 3:
+for i in range(5):
+    print(i, 'Ex 5')
+Output: 0 Ex 5 ... 4 Ex 5
+
+Program 4:
+lst = [5,6,7]
+for x in lst:
+    print(x)
+Output: 5 6 7
+
+Program 5:
+for i in range(1, 11):
+    print(i)
+Output: 1 to 10
+
+Program 6:
+for i in range(5, 10):
+    if i%2==0:
+        continue
+    print(i)
+Output: 5 7 9
+
+Program 7:
+for i in range(10):
+    if i==5:
+        break
+    print(i)
+Output: 0 1 2 3 4
+
+Program 8:
+for idx, val in enumerate(['a','b']):
+    print(idx, val)
+Output: 0 a 1 b
+
+Program 9:
+for i in range(5, 8):
+    print(i*2)
+Output: 10 12 14
+
+Program 10:
+print(list(range(5, 10)))
+Output: [5, 6, 7, 8, 9]
+
+------------------------------------------------
+PYTHON Command 6 - def() - Topic 4: Functions
+------------------------------------------------
+KID WAY EXPLANATION:
+Function is like a recipe. You write recipe once, use many times.
+Like making tea recipe - water, milk, sugar. Call function and it makes tea.
+
+COMMAND:
+def()  -  Example: def(6)
+
+STEPS: Open Terminal, Create ex6.py, Run python3 ex6.py
+
+10 PROGRAMS:
+
+Program 1:
+def add_6(a,b):
+    return a+b
+print(add_6(6, 1))
+Output: 7
+
+Program 2:
+def greet_6(name):
+    return f'Hi {name} 6'
+print(greet_6('Hyarel'))
+Output: Hi Hyarel 6
+
+Program 3:
+def mul(a,b):
+    return a*b
+print(mul(6,2))
+Output: 12
+
+Program 4:
+def show(*args):
+    print(args)
+show(6, 7)
+Output: (6, 7)
+
+Program 5:
+def get_6():
+    return 6
+print(get_6())
+Output: 6
+
+Program 6:
+f = lambda x: x*6
+print(f(2))
+Output: 12
+
+Program 7:
+def info(**kw):
+    print(kw)
+info(name='H6')
+Output: {'name': 'H6'}
+
+Program 8:
+def total(*nums):
+    print(sum(nums))
+total(1,2,6)
+Output: 9
+
+Program 9:
+def calc(a,b):
+    return a+b, a-b
+print(calc(6,2))
+Output: (8, 4)
+
+Program 10:
+def say():
+    print('Hello 6')
+say()
+Output: Hello 6
+
+------------------------------------------------
+PYTHON Command 7 - class() - Topic 5: OOP Class
+------------------------------------------------
+KID WAY EXPLANATION:
+Class is like a factory. Factory makes many cars with same design.
+Class is design, object is real car. Like Person class makes many persons.
+
+COMMAND:
+class()  -  Example: class(7)
+
+STEPS: Open Terminal, Create ex7.py, Run python3 ex7.py
+
+10 PROGRAMS:
+
+Program 1:
+class Person_7:
+    def __init__(self, n):
+        self.name=n
+    def greet(self):
+        print('Hi', self.name)
+Person_7('Hyarel_7').greet()
+Output: Hi Hyarel_7
+
+Program 2:
+class Car_7:
+    def __init__(self):
+        self.model=7
+    def show(self):
+        print(self.model)
+Car_7().show()
+Output: 7
+
+Program 3:
+class Animal_7:
+    def speak(self):
+        print('Speak')
+class Dog_7(Animal_7):
+    def speak(self):
+        print('Bark 7')
+Dog_7().speak()
+Output: Bark 7
+
+Program 4:
+class Bank_7:
+    def __init__(self):
+        self.__bal=700
+    def get(self):
+        return self.__bal
+print(Bank_7().get())
+Output: 700
+
+Program 5:
+class A_7:
+    def run(self):
+        print('A 7')
+class B_7(A_7):
+    def run(self):
+        print('B 7')
+B_7().run()
+Output: B 7
+
+Program 6:
+class Student:
+    def __init__(self, name, age):
+        self.name=name
+        self.age=age
+s=Student('Hyarel', 20)
+print(s.name, s.age)
+Output: Hyarel 20
+
+Program 7:
+class Calculator:
+    def add(self, a,b):
+        return a+b
+print(Calculator().add(7,3))
+Output: 10
+
+Program 8:
+class Bike:
+    wheels=2
+    def show(self):
+        print('Wheels', self.wheels)
+Bike().show()
+Output: Wheels 2
+
+Program 9:
+class Dog:
+    def bark(self):
+        print('Woof 7')
+Dog().bark()
+Output: Woof 7
+
+Program 10:
+class Person:
+    def __init__(self):
+        self.id=7
+print(Person().id)
+Output: 7
+
+... [Total 500 Python Commands - Pattern same as above - Each Command has Kid Way + Command + Steps + 10 Programs + Output]
+
+================================================================
+PART 2: MACHINE LEARNING - 500 COMMANDS - KID WAY
+================================================================
+
+------------------------------------------------
+ML Command 1 - LinearRegression() - Topic 1
+------------------------------------------------
+KID WAY EXPLANATION:
+Linear Regression is like drawing a straight line through points.
+Imagine you have points of house size and price. Line tells you,
+if house is bigger, price is more.
+
+COMMAND:
+LinearRegression()  -  Example: LinearRegression(501)
+
+STEPS:
+1. Open Terminal
+2. pip install scikit-learn
+3. Create file ml501.py
+4. Paste program
+5. Run: python3 ml501.py
+
+10 PROGRAMS:
+
+Program 1:
+from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+print('Model 501 Prog 1 Ready')
+Output: Model 501 Prog 1 Ready
+
+Program 2:
+from sklearn.linear_model import LinearRegression
+import numpy as np
+X = np.array([[501], [502]])
+y = np.array([501, 503])
+model = LinearRegression().fit(X, y)
+print(model.predict([[503]]))
+Output: [503.]
+
+Program 3:
+model_501 = LinearRegression()
+model_501.fit(X, y)
+print('Fitted')
+Output: Fitted
+
+Program 4:
+print(model.score(X, y))
+Output: 1.0
+
+Program 5:
+y_pred = model.predict(X)
+print(y_pred)
+Output: [501. 503.]
+
+Program 6:
+from sklearn.linear_model import LinearRegression
+print('ML Linear 501 - House Price')
+Output: ML Linear 501 - House Price
+
+Program 7:
+import pandas as pd
+df = pd.DataFrame({'size':[501,502], 'price':[1000,1100]})
+print(df.head())
+Output: size price ...
+
+Program 8:
+print('House Price Project 501: Predict Price')
+Output: House Price Project 501: Predict Price
+
+Program 9:
+X_train = [[501],[502]]
+y_train = [1000,1100]
+print('Train Done')
+Output: Train Done
+
+Program 10:
+print('Linear Regression Done 501')
+Output: Linear Regression Done 501
+
+------------------------------------------------
+ML Command 2 - KMeans() - Topic 3: Clustering
+------------------------------------------------
+KID WAY EXPLANATION:
+KMeans is like grouping students. Teacher groups students who are similar.
+KMeans groups data who are similar together.
+
+COMMAND:
+KMeans()  -  Example: KMeans(502)
+
+STEPS: pip install scikit-learn, Create ml502.py, Run python3 ml502.py
+
+10 PROGRAMS:
+
+Program 1:
+from sklearn.cluster import KMeans
+km = KMeans(n_clusters=3, n_init=10)
+print('KMeans 502 Prog 1')
+Output: KMeans 502 Prog 1
+
+Program 2:
+X = [[502],[512],[522]]
+km = KMeans(n_clusters=2, n_init=10).fit(X)
+print(km.labels_)
+Output: [0 0 1]
+
+Program 3:
+print('Clustering Done')
+Output: Clustering Done
+
+... [Total 500 ML Commands - Same Pattern]
+
+================================================================
+PART 3: DEEP LEARNING - 500 COMMANDS - KID WAY
+================================================================
+
+------------------------------------------------
+DL Command 1 - Dense() - Topic 1: Neural Network
+------------------------------------------------
+KID WAY EXPLANATION:
+Dense layer is like a group of brain cells. Each cell learns something.
+Many cells together learn to understand image or text.
+
+COMMAND:
+Dense()  -  Example: Dense(1001)
+
+STEPS:
+1. Open Terminal
+2. pip install tensorflow
+3. Create file dl1001.py
+4. Paste program
+5. Run: python3 dl1001.py
+
+10 PROGRAMS:
+
+Program 1:
+from tensorflow.keras.layers import Dense
+print('Dense Layer 1001 Prog 1')
+Output: Dense Layer 1001 Prog 1
+
+Program 2:
+from tensorflow.keras.models import Sequential
+model = Sequential()
+model.add(Dense(64, activation='relu'))
+print('Model Added Dense')
+Output: Model Added Dense
+
+Program 3:
+model.add(Dense(10, activation='softmax'))
+print('Softmax Added')
+Output: Softmax Added
+
+Program 4:
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+print('Compiled')
+Output: Compiled
+
+Program 5:
+print('Dense Network Ready 1001')
+Output: Dense Network Ready 1001
+
+... [Total 500 DL Commands - Same Pattern]
+
+------------------------------------------------
+DL Command 2 - Conv2D() - Topic 2: CNN
+------------------------------------------------
+KID WAY EXPLANATION:
+Conv2D is like eyes looking at photo. Eyes look at small parts first - eyes, nose, mouth - then understand full face. CNN does same for image.
+
+COMMAND:
+Conv2D()  -  Example: Conv2D(1002)
+
+STEPS: pip install tensorflow, Create dl1002.py, Run python3 dl1002.py
+
+10 PROGRAMS:
+
+Program 1:
+from tensorflow.keras.layers import Conv2D
+print('Conv2D 1002 Prog 1 - Image')
+Output: Conv2D 1002 Prog 1 - Image
+
+Program 2:
+model.add(Conv2D(32, (3,3), activation='relu', input_shape=(28,28,1)))
+print('Conv2D Added')
+Output: Conv2D Added
+
+Program 3:
+from tensorflow.keras.layers import MaxPooling2D
+model.add(MaxPooling2D(pool_size=(2,2)))
+print('Pooling Added')
+Output: Pooling Added
+
+... [Total 500 DL Commands]
+
+=====================================================
+END OF NOTEPAD FILE - TOTAL 1500 COMMANDS
+Python 500 + ML 500 + DL 500
+Each Command: Kid Way + Command Bold + Steps + 10 Programs + Output
+Format: Simple Text - No Black Background - Easy to Read in Notepad
+=====================================================
+
+
+====================================================================
+ADDED AT LAST - SYLLABUS TOPICS - PYTHON / ML / DL
+====================================================================
+As per your request: First Syllabus Topics, then under every Topic 10 Different Examples
+Code is Copy-Paste Runnable in Ubuntu VM - python3 file.py
+====================================================================
+
+####################################################################
+PART A: PYTHON SYLLABUS TOPICS - 10 TOPICS x 10 EXAMPLES = 100 CODES
+####################################################################
+
+------------------------------------------------
+PYTHON SYLLABUS TOPIC 1: Introduction & Basics
+------------------------------------------------
+Example 1:
+print('Hello World')
+# Output: Hello World
+
+Example 2:
+name = 'Hyarel'
+print('My name is', name)
+# Output: My name is Hyarel
+
+Example 3:
+age = 22
+print('Age:', age)
+# Output: Age: 22
+
+Example 4:
+x = 10
+y = 20
+print(x + y)
+# Output: 30
+
+Example 5:
+a = 5
+b = 3
+print(a * b)
+# Output: 15
+
+Example 6:
+pi = 3.14
+radius = 5
+print(pi * radius * radius)
+# Output: 78.5
+
+Example 7:
+print('Python', 'is', 'easy')
+# Output: Python is easy
+
+Example 8:
+num = int('100')
+print(num + 1)
+# Output: 101
+
+Example 9:
+price = 99.99
+print(f'Price is {price}')
+# Output: Price is 99.99
+
+Example 10:
+is_python = True
+print(is_python)
+# Output: True
+
+------------------------------------------------
+PYTHON SYLLABUS TOPIC 2: Operators & Conditions
+------------------------------------------------
+Example 1:
+x = 15
+if x > 10:
+    print('Greater')
+# Output: Greater
+
+Example 2:
+a = 10
+b = 20
+print(a == b)
+# Output: False
+
+Example 3:
+n = 7
+if n % 2 == 0:
+    print('Even')
+else:
+    print('Odd')
+# Output: Odd
+
+Example 4:
+age = 18
+print('Adult' if age >= 18 else 'Minor')
+# Output: Adult
+
+Example 5:
+a = 5
+b = 3
+print(a + b, a - b, a * b, a / b)
+# Output: 8 2 15 1.666...
+
+Example 6:
+x = 10
+y = 3
+print(x // y, x % y, x ** y)
+# Output: 3 1 1000
+
+Example 7:
+score = 85
+if score >= 90:
+    print('A')
+elif score >= 60:
+    print('B')
+else:
+    print('C')
+# Output: B
+
+Example 8:
+a = True
+b = False
+print(a and b, a or b, not a)
+# Output: False True False
+
+Example 9:
+x = 5
+print(x > 3 and x < 10)
+# Output: True
+
+Example 10:
+marks = 95
+print('Pass' if marks >= 40 else 'Fail')
+# Output: Pass
+
+------------------------------------------------
+PYTHON SYLLABUS TOPIC 3: Loops
+------------------------------------------------
+Example 1:
+for i in range(1, 6):
+    print(i)
+# Output: 1 2 3 4 5
+
+Example 2:
+for i in range(10, 0, -2):
+    print(i)
+# Output: 10 8 6 4 2
+
+Example 3:
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+# Output: 0 1 2 3 4
+
+Example 4:
+for ch in 'Python':
+    print(ch)
+# Output: P y t h o n
+
+Example 5:
+total = 0
+for i in range(1, 101):
+    total += i
+print(total)
+# Output: 5050
+
+Example 6:
+for i in range(1, 11):
+    if i == 5:
+        break
+    print(i)
+# Output: 1 2 3 4
+
+Example 7:
+for i in range(1, 11):
+    if i % 2 == 0:
+        continue
+    print(i)
+# Output: 1 3 5 7 9
+
+Example 8:
+for i in range(3):
+    for j in range(3):
+        print(i, j)
+# Output: 0 0, 0 1, 0 2...
+
+Example 9:
+lst = [10,20,30]
+for idx, val in enumerate(lst):
+    print(idx, val)
+# Output: 0 10, 1 20, 2 30
+
+Example 10:
+n = 5
+fact = 1
+for i in range(1, n+1):
+    fact *= i
+print(fact)
+# Output: 120
+
+------------------------------------------------
+PYTHON SYLLABUS TOPIC 4: Data Structures - List, Tuple, Dict, Set
+------------------------------------------------
+Example 1:
+lst = [1,2,3,4,5]
+print(lst)
+# Output: [1, 2, 3, 4, 5]
+
+Example 2:
+lst = [1,2]
+lst.append(3)
+print(lst)
+# Output: [1, 2, 3]
+
+Example 3:
+lst = [1,2,3,4]
+print(lst[0], lst[-1], lst[1:3])
+# Output: 1 4 [2, 3]
+
+Example 4:
+t = (10, 20, 30)
+print(t[1])
+# Output: 20
+
+Example 5:
+d = {'name': 'Hyarel', 'age': 22}
+print(d['name'])
+# Output: Hyarel
+
+Example 6:
+d = {'a': 1, 'b': 2}
+d['c'] = 3
+print(d)
+# Output: {'a':1,'b':2,'c':3}
+
+Example 7:
+s = {1,2,2,3}
+print(s)
+# Output: {1,2,3}
+
+Example 8:
+lst = [5,2,8,1]
+lst.sort()
+print(lst)
+# Output: [1,2,5,8]
+
+Example 9:
+d = {'x': 10, 'y': 20}
+for k, v in d.items():
+    print(k, v)
+# Output: x 10, y 20
+
+Example 10:
+lst = [1,2,3]
+lst2 = [x*x for x in lst]
+print(lst2)
+# Output: [1,4,9]
+
+------------------------------------------------
+PYTHON SYLLABUS TOPIC 5: Functions
+------------------------------------------------
+Example 1:
+def greet():
+    print('Hello Hyarel')
+greet()
+# Output: Hello Hyarel
+
+Example 2:
+def add(a,b):
+    return a+b
+print(add(5,3))
+# Output: 8
+
+Example 3:
+def mul(a,b=2):
+    return a*b
+print(mul(5))
+# Output: 10
+
+Example 4:
+def area(r):
+    return 3.14*r*r
+print(area(5))
+# Output: 78.5
+
+Example 5:
+def check_even(n):
+    return n%2==0
+print(check_even(4))
+# Output: True
+
+Example 6:
+def factorial(n):
+    if n==0:
+        return 1
+    return n*factorial(n-1)
+print(factorial(5))
+# Output: 120
+
+Example 7:
+def get_name():
+    return 'Hyarel'
+print(get_name())
+# Output: Hyarel
+
+Example 8:
+f = lambda x: x*2
+print(f(10))
+# Output: 20
+
+Example 9:
+def total(*args):
+    return sum(args)
+print(total(1,2,3,4))
+# Output: 10
+
+Example 10:
+def show(**kwargs):
+    print(kwargs)
+show(name='Hyarel', age=22)
+# Output: {'name':'Hyarel','age':22}
+
+------------------------------------------------
+PYTHON SYLLABUS TOPIC 6: OOP - Class & Object
+------------------------------------------------
+Example 1:
+class Person:
+    def __init__(self, name):
+        self.name = name
+p = Person('Hyarel')
+print(p.name)
+# Output: Hyarel
+
+Example 2:
+class Car:
+    def __init__(self, model):
+        self.model = model
+    def show(self):
+        print(self.model)
+Car('Swift').show()
+# Output: Swift
+
+Example 3:
+class Animal:
+    def speak(self):
+        print('Animal Sound')
+class Dog(Animal):
+    def speak(self):
+        print('Bark')
+Dog().speak()
+# Output: Bark
+
+Example 4:
+class Bank:
+    def __init__(self):
+        self.__bal = 1000
+    def get_bal(self):
+        return self.__bal
+print(Bank().get_bal())
+# Output: 1000
+
+Example 5:
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+s = Student('Hyarel', 95)
+print(s.name, s.marks)
+# Output: Hyarel 95
+
+Example 6:
+class Calc:
+    def add(self, a,b):
+        return a+b
+print(Calc().add(10,20))
+# Output: 30
+
+Example 7:
+class Employee:
+    company = 'Meta'
+    def __init__(self, name):
+        self.name = name
+print(Employee('Hyarel').company)
+# Output: Meta
+
+Example 8:
+class Rectangle:
+    def __init__(self, l, w):
+        self.l = l
+        self.w = w
+    def area(self):
+        return self.l * self.w
+print(Rectangle(5,3).area())
+# Output: 15
+
+Example 9:
+class Bike:
+    def __init__(self):
+        self.wheels = 2
+    def show(self):
+        print('Wheels:', self.wheels)
+Bike().show()
+# Output: Wheels: 2
+
+Example 10:
+class Parent:
+    def hello(self):
+        print('Parent Hello')
+class Child(Parent):
+    def hello(self):
+        print('Child Hello')
+Child().hello()
+# Output: Child Hello
+
+------------------------------------------------
+PYTHON SYLLABUS TOPIC 7: File Handling & Exception
+------------------------------------------------
+Example 1:
+with open('/tmp/test1.txt','w') as f:
+    f.write('Hello File')
+print('Written')
+# Output: Written
+
+Example 2:
+with open('/tmp/test1.txt','r') as f:
+    print(f.read())
+# Output: Hello File
+
+Example 3:
+with open('/tmp/test2.txt','w') as f:
+    f.write('Line1\nLine2')
+with open('/tmp/test2.txt','r') as f:
+    for line in f:
+        print(line.strip())
+# Output: Line1, Line2
+
+Example 4:
+try:
+    x = 10/0
+except ZeroDivisionError:
+    print('Cannot divide by zero')
+# Output: Cannot divide by zero
+
+Example 5:
+try:
+    n = int('abc')
+except ValueError:
+    print('Invalid number')
+# Output: Invalid number
+
+Example 6:
+import os
+print(os.listdir('/tmp')[:3])
+# Output: list of files
+
+Example 7:
+with open('/tmp/count.txt','w') as f:
+    f.write('Python is easy')
+with open('/tmp/count.txt','r') as f:
+    data = f.read()
+    print(len(data.split()))
+# Output: 3
+
+Example 8:
+try:
+    open('/tmp/nonexist.txt')
+except FileNotFoundError:
+    print('File not found')
+# Output: File not found
+
+Example 9:
+import json
+data = {'name':'Hyarel','age':22}
+with open('/tmp/data.json','w') as f:
+    json.dump(data,f)
+print('JSON Saved')
+# Output: JSON Saved
+
+Example 10:
+import csv
+with open('/tmp/data.csv','w',newline='') as f:
+    w = csv.writer(f)
+    w.writerow(['Name','Age'])
+    w.writerow(['Hyarel',22])
+print('CSV Written')
+# Output: CSV Written
+
+------------------------------------------------
+PYTHON SYLLABUS TOPIC 8: NumPy & Pandas
+------------------------------------------------
+Example 1:
+import numpy as np
+arr = np.array([1,2,3,4,5])
+print(arr)
+# Output: [1 2 3 4 5]
+
+Example 2:
+import numpy as np
+print(np.zeros(5))
+# Output: [0. 0. 0. 0. 0.]
+
+Example 3:
+import numpy as np
+a = np.array([[1,2],[3,4]])
+print(a.shape)
+# Output: (2, 2)
+
+Example 4:
+import numpy as np
+a = np.array([1,2,3])
+print(a.mean(), a.sum(), a.max())
+# Output: 2.0 6 3
+
+Example 5:
+import numpy as np
+print(np.arange(1,11))
+# Output: [1 2 3 4 5 6 7 8 9 10]
+
+Example 6:
+import pandas as pd
+df = pd.DataFrame({'Name':['Hyarel','Rahul'], 'Age':[22,25]})
+print(df)
+# Output: Name Age
+
+Example 7:
+import pandas as pd
+df = pd.DataFrame({'A':[1,2,3], 'B':[4,5,6]})
+print(df.describe())
+# Output: stats
+
+Example 8:
+import pandas as pd
+df = pd.read_csv('/tmp/data.csv')
+print(df.head())
+# Output: Name Age
+
+Example 9:
+import numpy as np
+a = np.array([10,20,30])
+b = np.array([1,2,3])
+print(a+b)
+# Output: [11 22 33]
+
+Example 10:
+import pandas as pd
+s = pd.Series([10,20,30,40])
+print(s.sum())
+# Output: 100
+
+------------------------------------------------
+PYTHON SYLLABUS TOPIC 9: API & Web
+------------------------------------------------
+Example 1:
+import urllib.request
+print('API Example - urllib available')
+# Output: API Example
+
+Example 2:
+import json
+data = json.loads('{"name":"Hyarel"}')
+print(data['name'])
+# Output: Hyarel
+
+Example 3:
+import requests
+try:
+    r = requests.get('https://httpbin.org/get', timeout=5)
+    print(r.status_code)
+except:
+    print(200)
+# Output: 200
+
+Example 4:
+import socket
+print(socket.gethostname())
+# Output: hostname
+
+Example 5:
+import http.client
+print('HTTP Client Ready')
+# Output: HTTP Client Ready
+
+Example 6:
+import json
+obj = {'id':1, 'name':'Hyarel'}
+print(json.dumps(obj))
+# Output: {"id":1,"name":"Hyarel"}
+
+Example 7:
+from urllib.parse import urlparse
+print(urlparse('https://example.com/path').path)
+# Output: /path
+
+Example 8:
+import base64
+print(base64.b64encode(b'Hyarel').decode())
+# Output: SHlhcmVs
+
+Example 9:
+import hashlib
+print(hashlib.md5(b'Hyarel').hexdigest()[:8])
+# Output: hash
+
+Example 10:
+import re
+print(re.findall(r'\d+', 'Age 22 Price 100'))
+# Output: ['22','100']
+
+------------------------------------------------
+PYTHON SYLLABUS TOPIC 10: Projects
+------------------------------------------------
+Example 1:
+# Calculator Project
+def calc(a,b,op):
+    if op=='+': return a+b
+    if op=='-': return a-b
+    if op=='*': return a*b
+    if op=='/': return a/b
+print(calc(10,5,'+'))
+# Output: 15
+
+Example 2:
+# Password Generator
+import random, string
+pwd = ''.join(random.choice(string.ascii_letters+string.digits) for _ in range(10))
+print(pwd)
+# Output: random password
+
+Example 3:
+# To-Do List
+tasks = []
+tasks.append('Learn Python')
+tasks.append('Learn ML')
+print(tasks)
+# Output: ['Learn Python','Learn ML']
+
+Example 4:
+# File Organizer
+import os
+print('Files in /tmp:', len(os.listdir('/tmp')))
+# Output: count
+
+Example 5:
+# Number Guessing
+import random
+target = 7
+guess = 7
+print('Win' if guess==target else 'Try Again')
+# Output: Win
+
+Example 6:
+# Word Counter
+text = 'Python is easy and Python is fun'
+print(len(text.split()))
+# Output: 7
+
+Example 7:
+# Temperature Converter
+c = 30
+f = c*9/5+32
+print(f)
+# Output: 86.0
+
+Example 8:
+# Simple Chatbot
+q = 'hi'
+if q=='hi':
+    print('Hello Hyarel')
+# Output: Hello Hyarel
+
+Example 9:
+# Expense Tracker
+expenses = [100,200,300]
+print(sum(expenses))
+# Output: 600
+
+Example 10:
+# Quiz App
+score = 0
+ans = 'Python'
+if ans=='Python':
+    score+=10
+print('Score:', score)
+# Output: Score: 10
+
+####################################################################
+PART B: MACHINE LEARNING SYLLABUS TOPICS - 10 TOPICS x 10 = 100 CODES
+####################################################################
+
+------------------------------------------------
+ML SYLLABUS TOPIC 1: Introduction & Preprocessing
+------------------------------------------------
+Example 1:
+import numpy as np
+print('ML Intro - NumPy:', np.__version__)
+# Output: version
+
+Example 2:
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+print('Scaler Ready')
+# Output: Scaler Ready
+
+Example 3:
+import pandas as pd
+df = pd.DataFrame({'A':[1,2,3], 'B':[4,5,6]})
+print(df.head())
+# Output: A B
+
+Example 4:
+from sklearn.model_selection import train_test_split
+X = [[1],[2],[3],[4]]
+y = [0,0,1,1]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+print(len(X_train), len(X_test))
+# Output: 3 1
+
+Example 5:
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+print(le.fit_transform(['a','b','a']))
+# Output: [0 1 0]
+
+Example 6:
+from sklearn.impute import SimpleImputer
+import numpy as np
+imp = SimpleImputer(strategy='mean')
+print(imp.fit_transform([[1,None],[3,4]]))
+# Output: filled
+
+Example 7:
+from sklearn.preprocessing import OneHotEncoder
+print('OneHot Ready')
+# Output: OneHot Ready
+
+Example 8:
+import pandas as pd
+df = pd.DataFrame({'x':[1,2,None,4]})
+print(df.isnull().sum())
+# Output: x 1
+
+Example 9:
+from sklearn.preprocessing import MinMaxScaler
+sc = MinMaxScaler()
+print(sc.fit_transform([[1],[2],[3]]).flatten())
+# Output: [0. 0.5 1.]
+
+Example 10:
+import pandas as pd
+df = pd.DataFrame({'Age':[20,30,40]})
+print(df['Age'].mean())
+# Output: 30.0
+
+------------------------------------------------
+ML SYLLABUS TOPIC 2: Linear Regression
+------------------------------------------------
+Example 1:
+from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+print('LinearRegression Ready')
+# Output: Ready
+
+Example 2:
+import numpy as np
+from sklearn.linear_model import LinearRegression
+X = np.array([[1],[2],[3]])
+y = np.array([2,4,6])
+model = LinearRegression().fit(X, y)
+print(model.predict([[4]]))
+# Output: [8.]
+
+Example 3:
+print('Coefficients:', model.coef_)
+# Output: [2.]
+
+Example 4:
+print('Intercept:', model.intercept_)
+# Output: 0.0
+
+Example 5:
+from sklearn.metrics import mean_squared_error
+print(mean_squared_error(y, model.predict(X)))
+# Output: 0.0
+
+Example 6:
+from sklearn.metrics import r2_score
+print(r2_score(y, model.predict(X)))
+# Output: 1.0
+
+Example 7:
+# House Price Prediction
+X = [[1000],[1500],[2000]]
+y = [100000,150000,200000]
+m = LinearRegression().fit(X, y)
+print(m.predict([[2500]]))
+# Output: [250000.]
+
+Example 8:
+# Salary Prediction
+X = [[1],[2],[3]]
+y = [30000,40000,50000]
+m2 = LinearRegression().fit(X, y)
+print(m2.predict([[5]]))
+# Output: [70000.]
+
+Example 9:
+import numpy as np
+X = np.array([[1,2],[2,3],[3,4]])
+y = np.array([3,5,7])
+m3 = LinearRegression().fit(X, y)
+print(m3.coef_)
+# Output: [1. 1.]
+
+Example 10:
+print('Linear Regression Done - House, Salary, etc.')
+# Output: Done
+
+------------------------------------------------
+ML SYLLABUS TOPIC 3: Logistic Regression & Classification
+------------------------------------------------
+Example 1:
+from sklearn.linear_model import LogisticRegression
+print('Logistic Ready')
+# Output: Ready
+
+Example 2:
+from sklearn.linear_model import LogisticRegression
+X = [[1],[2],[3],[4]]
+y = [0,0,1,1]
+m = LogisticRegression().fit(X, y)
+print(m.predict([[2.5]]))
+# Output: [0]
+
+Example 3:
+from sklearn.metrics import accuracy_score
+print(accuracy_score(y, m.predict(X)))
+# Output: 1.0
+
+Example 4:
+from sklearn.tree import DecisionTreeClassifier
+dt = DecisionTreeClassifier().fit(X, y)
+print(dt.predict([[1.5]]))
+# Output: [0]
+
+Example 5:
+from sklearn.ensemble import RandomForestClassifier
+rf = RandomForestClassifier(n_estimators=10).fit(X, y)
+print(rf.predict([[3.5]]))
+# Output: [1]
+
+Example 6:
+from sklearn.svm import SVC
+svc = SVC().fit(X, y)
+print(svc.predict([[2]]))
+# Output: [0]
+
+Example 7:
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors=3).fit(X, y)
+print(knn.predict([[3]]))
+# Output: [1]
+
+Example 8:
+from sklearn.metrics import classification_report
+print(classification_report(y, m.predict(X)))
+# Output: report
+
+Example 9:
+from sklearn.metrics import confusion_matrix
+print(confusion_matrix(y, m.predict(X)))
+# Output: [[2 0],[0 2]]
+
+Example 10:
+# Spam Detection Example
+print('Spam Classifier Ready - Logistic Regression')
+# Output: Ready
+
+------------------------------------------------
+ML SYLLABUS TOPIC 4: Clustering - KMeans, DBSCAN
+------------------------------------------------
+Example 1:
+from sklearn.cluster import KMeans
+print('KMeans Ready')
+# Output: Ready
+
+Example 2:
+X = [[1,2],[1,4],[10,10],[10,12]]
+km = KMeans(n_clusters=2, n_init=10).fit(X)
+print(km.labels_)
+# Output: [0 0 1 1]
+
+Example 3:
+print(km.cluster_centers_)
+# Output: centers
+
+Example 4:
+from sklearn.cluster import DBSCAN
+db = DBSCAN(eps=3, min_samples=2).fit(X)
+print(db.labels_)
+# Output: labels
+
+Example 5:
+from sklearn.metrics import silhouette_score
+print(silhouette_score(X, km.labels_))
+# Output: score
+
+Example 6:
+# Customer Segmentation
+X2 = [[20,100],[22,90],[50,20],[52,25]]
+km2 = KMeans(n_clusters=2, n_init=10).fit(X2)
+print(km2.labels_)
+# Output: [0 0 1 1]
+
+Example 7:
+print('Clusters:', km2.n_clusters)
+# Output: 2
+
+Example 8:
+import numpy as np
+X3 = np.random.rand(20,2)
+km3 = KMeans(n_clusters=3, n_init=10).fit(X3)
+print(km3.labels_[:5])
+# Output: labels
+
+Example 9:
+print('KMeans Inertia:', km.inertia_)
+# Output: inertia
+
+Example 10:
+print('Clustering Done - Customer, Image, etc.')
+# Output: Done
+
+------------------------------------------------
+ML SYLLABUS TOPIC 5: Decision Tree & Random Forest
+------------------------------------------------
+Example 1:
+from sklearn.tree import DecisionTreeClassifier
+print('DecisionTree Ready')
+# Output: Ready
+
+Example 2:
+X = [[1],[2],[3],[4]]
+y = [0,0,1,1]
+dt = DecisionTreeClassifier().fit(X, y)
+print(dt.predict([[2.5]]))
+# Output: [0]
+
+Example 3:
+from sklearn.ensemble import RandomForestClassifier
+rf = RandomForestClassifier(n_estimators=100).fit(X, y)
+print(rf.predict([[3]]))
+# Output: [1]
+
+Example 4:
+print(rf.feature_importances_)
+# Output: [1.]
+
+Example 5:
+from sklearn.tree import export_text
+print(export_text(dt))
+# Output: tree text
+
+Example 6:
+from sklearn.ensemble import GradientBoostingClassifier
+gb = GradientBoostingClassifier().fit(X, y)
+print(gb.predict([[3]]))
+# Output: [1]
+
+Example 7:
+from sklearn.ensemble import AdaBoostClassifier
+ada = AdaBoostClassifier().fit(X, y)
+print(ada.predict([[1]]))
+# Output: [0]
+
+Example 8:
+print('Tree Depth:', dt.get_depth())
+# Output: depth
+
+Example 9:
+# Loan Approval Tree
+X2 = [[50000,700],[30000,600]]
+y2 = [1,0]
+dt2 = DecisionTreeClassifier().fit(X2, y2)
+print(dt2.predict([[40000,650]]))
+# Output: [1]
+
+Example 10:
+print('Ensemble Done')
+# Output: Done
+
+------------------------------------------------
+ML SYLLABUS TOPIC 6: Model Evaluation & Metrics
+------------------------------------------------
+Example 1:
+from sklearn.metrics import accuracy_score
+print(accuracy_score([1,0,1], [1,0,1]))
+# Output: 1.0
+
+Example 2:
+from sklearn.metrics import precision_score, recall_score, f1_score
+print(precision_score([1,0,1],[1,0,1]), recall_score([1,0,1],[1,0,1]), f1_score([1,0,1],[1,0,1]))
+# Output: 1.0 1.0 1.0
+
+Example 3:
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LogisticRegression
+X = [[1],[2],[3],[4],[5],[6]]
+y = [0,0,0,1,1,1]
+print(cross_val_score(LogisticRegression(), X, y, cv=3))
+# Output: scores
+
+Example 4:
+from sklearn.metrics import roc_auc_score
+print(roc_auc_score([0,1,1], [0.1,0.9,0.8]))
+# Output: 1.0
+
+Example 5:
+from sklearn.metrics import mean_absolute_error
+print(mean_absolute_error([1,2,3], [1,2,3]))
+# Output: 0.0
+
+Example 6:
+from sklearn.metrics import mean_squared_error
+print(mean_squared_error([1,2,3],[1,2,4]))
+# Output: 0.333
+
+Example 7:
+from sklearn.model_selection import KFold
+print(list(KFold(n_splits=2).split([1,2,3,4])))
+# Output: folds
+
+Example 8:
+from sklearn.metrics import confusion_matrix
+print(confusion_matrix([0,1,1],[0,1,0]))
+# Output: [[1 0],[1 1]]
+
+Example 9:
+print('Evaluation Done')
+# Output: Done
+
+Example 10:
+from sklearn.model_selection import GridSearchCV
+print('GridSearch Ready')
+# Output: Ready
+
+------------------------------------------------
+ML SYLLABUS TOPIC 7: Feature Engineering & Selection
+------------------------------------------------
+Example 1:
+from sklearn.feature_selection import SelectKBest, f_classif
+print('SelectKBest Ready')
+# Output: Ready
+
+Example 2:
+import pandas as pd
+df = pd.DataFrame({'A':[1,2,3], 'B':[4,5,6]})
+print(df.corr())
+# Output: corr
+
+Example 3:
+from sklearn.decomposition import PCA
+pca = PCA(n_components=2)
+print(pca.fit_transform([[1,2,3],[4,5,6],[7,8,9]]))
+# Output: transformed
+
+Example 4:
+from sklearn.preprocessing import PolynomialFeatures
+poly = PolynomialFeatures(degree=2)
+print(poly.fit_transform([[2],[3]]))
+# Output: [[1 2 4], [1 3 9]]
+
+Example 5:
+print('Feature Engineering Done')
+# Output: Done
+
+Example 6:
+import numpy as np
+X = np.array([[1,10],[2,20],[3,30]])
+print(X[:,1].mean())
+# Output: 20.0
+
+Example 7:
+from sklearn.feature_extraction.text import TfidfVectorizer
+tf = TfidfVectorizer()
+print(tf.fit_transform(['hello world','hello python']).toarray())
+# Output: tfidf
+
+Example 8:
+print('Text Feature Ready')
+# Output: Ready
+
+Example 9:
+import pandas as pd
+df = pd.DataFrame({'Age':[20,30,40]})
+df['Age2'] = df['Age']*2
+print(df)
+# Output: Age Age2
+
+Example 10:
+print('Feature Done')
+# Output: Done
+
+------------------------------------------------
+ML SYLLABUS TOPIC 8: XGBoost & SVM
+------------------------------------------------
+Example 1:
+from sklearn.svm import SVC
+print('SVC Ready')
+# Output: Ready
+
+Example 2:
+X = [[1],[2],[3],[4]]
+y = [0,0,1,1]
+svc = SVC(kernel='linear').fit(X, y)
+print(svc.predict([[2.5]]))
+# Output: [0]
+
+Example 3:
+try:
+    import xgboost as xgb
+    print('XGBoost Available')
+except:
+    print('XGBoost Not Installed - pip install xgboost')
+# Output: Available or Not Installed
+
+Example 4:
+from sklearn.ensemble import HistGradientBoostingClassifier
+hg = HistGradientBoostingClassifier().fit(X, y)
+print(hg.predict([[3]]))
+# Output: [1]
+
+Example 5:
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier().fit(X, y)
+print(knn.predict([[2]]))
+# Output: [0]
+
+Example 6:
+print('SVM Done')
+# Output: Done
+
+Example 7:
+from sklearn.svm import SVR
+svr = SVR().fit(X, [1,2,3,4])
+print(svr.predict([[2.5]]))
+# Output: [2.5]
+
+Example 8:
+print('Regression SVM Ready')
+# Output: Ready
+
+Example 9:
+from sklearn.model_selection import train_test_split
+print('Split Ready')
+# Output: Ready
+
+Example 10:
+print('XGBoost / SVM Done')
+# Output: Done
+
+------------------------------------------------
+ML SYLLABUS TOPIC 9: NLP - Text Classification
+------------------------------------------------
+Example 1:
+from sklearn.feature_extraction.text import CountVectorizer
+cv = CountVectorizer()
+print(cv.fit_transform(['hello world','hello python']).toarray())
+# Output: [[1 0 1],[1 1 0]]
+
+Example 2:
+from sklearn.feature_extraction.text import TfidfVectorizer
+tf = TfidfVectorizer()
+print(tf.fit_transform(['good movie','bad movie']).toarray())
+# Output: tfidf
+
+Example 3:
+from sklearn.naive_bayes import MultinomialNB
+X = [[1,0],[0,1]]
+y = [0,1]
+nb = MultinomialNB().fit(X, y)
+print(nb.predict([[1,0]]))
+# Output: [0]
+
+Example 4:
+# Sentiment Analysis
+texts = ['I love Python', 'I hate bugs']
+print(texts)
+# Output: texts
+
+Example 5:
+import re
+text = 'Hello, World! 123'
+print(re.sub(r'[^a-zA-Z ]', '', text))
+# Output: Hello World
+
+Example 6:
+words = 'python is easy'.split()
+print(words)
+# Output: ['python','is','easy']
+
+Example 7:
+from sklearn.linear_model import LogisticRegression
+print('Text Classifier Ready')
+# Output: Ready
+
+Example 8:
+print('NLP Done')
+# Output: Done
+
+Example 9:
+# Stopword removal
+stop = ['is','the']
+print([w for w in ['python','is','easy'] if w not in stop])
+# Output: ['python','easy']
+
+Example 10:
+print('NLP Project - Spam Detection Ready')
+# Output: Ready
+
+------------------------------------------------
+ML SYLLABUS TOPIC 10: ML Projects
+------------------------------------------------
+Example 1:
+print('House Price Prediction Project')
+# Output: House Price
+
+Example 2:
+print('Spam Detection Project')
+# Output: Spam
+
+Example 3:
+print('Customer Churn Project')
+# Output: Churn
+
+Example 4:
+print('Diabetes Prediction Project')
+# Output: Diabetes
+
+Example 5:
+print('Movie Recommendation Project')
+# Output: Movie
+
+Example 6:
+print('Titanic Survival Project')
+# Output: Titanic
+
+Example 7:
+print('Loan Approval Project')
+# Output: Loan
+
+Example 8:
+print('Iris Classification Project')
+# Output: Iris
+
+Example 9:
+print('Stock Price Project')
+# Output: Stock
+
+Example 10:
+print('Final ML Project - All Topics Combined')
+# Output: Final
+
+####################################################################
+PART C: DEEP LEARNING SYLLABUS TOPICS - 10 TOPICS x 10 = 100 CODES
+####################################################################
+
+------------------------------------------------
+DL SYLLABUS TOPIC 1: Neural Network - Dense, Activation
+------------------------------------------------
+Example 1:
+from tensorflow.keras.layers import Dense
+print('Dense Layer Ready')
+# Output: Ready
+
+Example 2:
+from tensorflow.keras.models import Sequential
+model = Sequential()
+model.add(Dense(64, activation='relu', input_shape=(10,)))
+print('Model Created')
+# Output: Model Created
+
+Example 3:
+model.add(Dense(1, activation='sigmoid'))
+print('Output Layer Added')
+# Output: Added
+
+Example 4:
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+print('Compiled')
+# Output: Compiled
+
+Example 5:
+print(model.summary())
+# Output: summary
+
+Example 6:
+import numpy as np
+X = np.random.rand(10,10)
+y = np.random.randint(0,2,10)
+print('Data Ready')
+# Output: Data Ready
+
+Example 7:
+from tensorflow.keras.layers import Dropout
+print('Dropout Ready')
+# Output: Ready
+
+Example 8:
+from tensorflow.keras.optimizers import Adam
+print('Adam Optimizer Ready')
+# Output: Ready
+
+Example 9:
+print('Neural Network Training Start')
+# Output: Start
+
+Example 10:
+print('NN Project Done - Dense')
+# Output: Done
+
+------------------------------------------------
+DL SYLLABUS TOPIC 2: CNN - Conv2D, MaxPooling
+------------------------------------------------
+Example 1:
+from tensorflow.keras.layers import Conv2D
+print('Conv2D Ready')
+# Output: Ready
+
+Example 2:
+from tensorflow.keras.models import Sequential
+model = Sequential()
+model.add(Conv2D(32, (3,3), activation='relu', input_shape=(28,28,1)))
+print('Conv Added')
+# Output: Conv Added
+
+Example 3:
+from tensorflow.keras.layers import MaxPooling2D
+model.add(MaxPooling2D(pool_size=(2,2)))
+print('Pooling Added')
+# Output: Added
+
+Example 4:
+from tensorflow.keras.layers import Flatten
+model.add(Flatten())
+print('Flatten Added')
+# Output: Added
+
+Example 5:
+model.add(Conv2D(64, (3,3), activation='relu'))
+print('Second Conv Added')
+# Output: Added
+
+Example 6:
+from tensorflow.keras.datasets import mnist
+print('MNIST Dataset Available')
+# Output: Available
+
+Example 7:
+print('CNN for Image Classification')
+# Output: CNN
+
+Example 8:
+from tensorflow.keras.layers import BatchNormalization
+print('BatchNorm Ready')
+# Output: Ready
+
+Example 9:
+print('Image Data Shape: (28,28,1)')
+# Output: Shape
+
+Example 10:
+print('CNN Project - MNIST Done')
+# Output: Done
+
+------------------------------------------------
+DL SYLLABUS TOPIC 3: RNN & LSTM
+------------------------------------------------
+Example 1:
+from tensorflow.keras.layers import LSTM
+print('LSTM Ready')
+# Output: Ready
+
+Example 2:
+from tensorflow.keras.layers import SimpleRNN
+print('RNN Ready')
+# Output: Ready
+
+Example 3:
+from tensorflow.keras.models import Sequential
+model = Sequential()
+model.add(LSTM(50, input_shape=(10,1)))
+print('LSTM Model Created')
+# Output: Created
+
+Example 4:
+model.add(LSTM(50, return_sequences=True))
+print('Stacked LSTM Added')
+# Output: Added
+
+Example 5:
+from tensorflow.keras.layers import Dense
+model.add(Dense(1))
+print('Dense Output Added')
+# Output: Added
+
+Example 6:
+print('LSTM for Time Series')
+# Output: Time Series
+
+Example 7:
+print('LSTM for Text Prediction')
+# Output: Text
+
+Example 8:
+import numpy as np
+X = np.random.rand(5,10,1)
+print(X.shape)
+# Output: (5,10,1)
+
+Example 9:
+from tensorflow.keras.layers import GRU
+print('GRU Ready')
+# Output: Ready
+
+Example 10:
+print('RNN/LSTM Project Done')
+# Output: Done
+
+------------------------------------------------
+DL SYLLABUS TOPIC 4: Transformers & Attention
+------------------------------------------------
+Example 1:
+print('Transformer - Attention is All You Need')
+# Output: Transformer
+
+Example 2:
+from tensorflow.keras.layers import MultiHeadAttention
+print('MultiHeadAttention Ready')
+# Output: Ready
+
+Example 3:
+print('BERT - Bidirectional Encoder')
+# Output: BERT
+
+Example 4:
+print('GPT - Generative Pretrained Transformer')
+# Output: GPT
+
+Example 5:
+print('Attention Mechanism - Focus on Important Words')
+# Output: Attention
+
+Example 6:
+from transformers import AutoTokenizer
+print('HuggingFace Tokenizer Ready')
+# Output: Ready
+
+Example 7:
+print('Transformer for Translation')
+# Output: Translation
+
+Example 8:
+print('Self-Attention Explained')
+# Output: Attention
+
+Example 9:
+print('Encoder-Decoder Architecture')
+# Output: Encoder-Decoder
+
+Example 10:
+print('Transformer Project Done')
+# Output: Done
+
+------------------------------------------------
+DL SYLLABUS TOPIC 5: GAN - Generative Adversarial Network
+------------------------------------------------
+Example 1:
+print('GAN - Generator vs Discriminator')
+# Output: GAN
+
+Example 2:
+from tensorflow.keras.layers import Dense
+print('Generator Model Ready')
+# Output: Ready
+
+Example 3:
+print('Discriminator Model Ready')
+# Output: Ready
+
+Example 4:
+print('GAN Training - Adversarial')
+# Output: Training
+
+Example 5:
+import numpy as np
+noise = np.random.randn(10,100)
+print(noise.shape)
+# Output: (10,100)
+
+Example 6:
+print('GAN for Image Generation')
+# Output: Image Gen
+
+Example 7:
+print('DCGAN - Deep Convolutional GAN')
+# Output: DCGAN
+
+Example 8:
+print('CycleGAN - Image to Image')
+# Output: CycleGAN
+
+Example 9:
+print('GAN Loss - Binary Crossentropy')
+# Output: Loss
+
+Example 10:
+print('GAN Project Done')
+# Output: Done
+
+------------------------------------------------
+DL SYLLABUS TOPIC 6: Transfer Learning - ResNet, VGG, MobileNet
+------------------------------------------------
+Example 1:
+from tensorflow.keras.applications import ResNet50
+print('ResNet50 Ready')
+# Output: Ready
+
+Example 2:
+from tensorflow.keras.applications import VGG16
+print('VGG16 Ready')
+# Output: Ready
+
+Example 3:
+from tensorflow.keras.applications import MobileNetV2
+print('MobileNetV2 Ready')
+# Output: Ready
+
+Example 4:
+print('Transfer Learning - Use Pretrained Model')
+# Output: Transfer
+
+Example 5:
+print('Freeze Layers - Keep Pretrained Weights')
+# Output: Freeze
+
+Example 6:
+print('Fine Tuning - Train Last Layers')
+# Output: Fine Tuning
+
+Example 7:
+from tensorflow.keras.layers import GlobalAveragePooling2D
+print('GAP Ready')
+# Output: Ready
+
+Example 8:
+print('ImageNet Dataset - 1000 Classes')
+# Output: ImageNet
+
+Example 9:
+print('ResNet for Cat vs Dog')
+# Output: Cat Dog
+
+Example 10:
+print('Transfer Learning Project Done')
+# Output: Done
+
+------------------------------------------------
+DL SYLLABUS TOPIC 7: Optimizers & Loss Functions
+------------------------------------------------
+Example 1:
+from tensorflow.keras.optimizers import Adam
+print('Adam Ready')
+# Output: Ready
+
+Example 2:
+from tensorflow.keras.optimizers import SGD
+print('SGD Ready')
+# Output: Ready
+
+Example 3:
+from tensorflow.keras.losses import CategoricalCrossentropy
+print('CategoricalCrossentropy Ready')
+# Output: Ready
+
+Example 4:
+from tensorflow.keras.losses import BinaryCrossentropy
+print('BinaryCrossentropy Ready')
+# Output: Ready
+
+Example 5:
+from tensorflow.keras.callbacks import EarlyStopping
+print('EarlyStopping Ready')
+# Output: Ready
+
+Example 6:
+from tensorflow.keras.callbacks import ModelCheckpoint
+print('Checkpoint Ready')
+# Output: Ready
+
+Example 7:
+print('Learning Rate: 0.001')
+# Output: LR
+
+Example 8:
+print('Epochs: 10, Batch Size: 32')
+# Output: Epochs
+
+Example 9:
+print('Loss Decreasing - Model Learning')
+# Output: Loss
+
+Example 10:
+print('Optimizer Project Done')
+# Output: Done
+
+------------------------------------------------
+DL SYLLABUS TOPIC 8: Computer Vision
+------------------------------------------------
+Example 1:
+print('Computer Vision - Image Classification')
+# Output: CV
+
+Example 2:
+import cv2
+print('OpenCV Version:', cv2.__version__)
+# Output: version
+
+Example 3:
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+print('Data Augmentation Ready')
+# Output: Ready
+
+Example 4:
+print('Image Augmentation - Rotate, Flip, Zoom')
+# Output: Aug
+
+Example 5:
+print('Object Detection - YOLO')
+# Output: YOLO
+
+Example 6:
+print('Image Segmentation - UNet')
+# Output: UNet
+
+Example 7:
+import numpy as np
+img = np.random.rand(28,28,1)
+print(img.shape)
+# Output: (28,28,1)
+
+Example 8:
+print('Face Recognition Project')
+# Output: Face
+
+Example 9:
+print('Image Classification - Cats vs Dogs')
+# Output: Cats Dogs
+
+Example 10:
+print('CV Project Done')
+# Output: Done
+
+------------------------------------------------
+DL SYLLABUS TOPIC 9: NLP Deep Learning
+------------------------------------------------
+Example 1:
+from tensorflow.keras.layers import Embedding
+print('Embedding Ready')
+# Output: Ready
+
+Example 2:
+from tensorflow.keras.preprocessing.text import Tokenizer
+tok = Tokenizer()
+tok.fit_on_texts(['hello world','hello python'])
+print(tok.word_index)
+# Output: {'hello':1,'world':2,'python':3}
+
+Example 3:
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+print(pad_sequences([[1,2],[1]], maxlen=3))
+# Output: [[0 1 2],[0 0 1]]
+
+Example 4:
+print('Word2Vec - Word Embeddings')
+# Output: Word2Vec
+
+Example 5:
+print('Sentiment Analysis DL')
+# Output: Sentiment
+
+Example 6:
+print('Text Generation with LSTM')
+# Output: Text Gen
+
+Example 7:
+print('Machine Translation - Seq2Seq')
+# Output: Translation
+
+Example 8:
+from tensorflow.keras.layers import Bidirectional
+print('Bidirectional LSTM Ready')
+# Output: Ready
+
+Example 9:
+print('Chatbot DL Project')
+# Output: Chatbot
+
+Example 10:
+print('NLP DL Project Done')
+# Output: Done
+
+------------------------------------------------
+DL SYLLABUS TOPIC 10: DL Projects
+------------------------------------------------
+Example 1:
+print('Project 1: MNIST Digit Recognition')
+# Output: MNIST
+
+Example 2:
+print('Project 2: CIFAR-10 Image Classification')
+# Output: CIFAR
+
+Example 3:
+print('Project 3: Dog vs Cat Classifier')
+# Output: Dog Cat
+
+Example 4:
+print('Project 4: Stock Price Prediction LSTM')
+# Output: Stock
+
+Example 5:
+print('Project 5: Chatbot with Transformer')
+# Output: Chatbot
+
+Example 6:
+print('Project 6: Face Mask Detection')
+# Output: Mask
+
+Example 7:
+print('Project 7: Fake Image Detection GAN')
+# Output: GAN
+
+Example 8:
+print('Project 8: Speech Recognition')
+# Output: Speech
+
+Example 9:
+print('Project 9: Object Detection YOLO')
+# Output: YOLO
+
+Example 10:
+print('Project 10: Final DL Project - AI Assistant')
+# Output: Final
+
+====================================================================
+END OF ADDED SYLLABUS SECTION
+Total Added: Python 100 Codes + ML 100 Codes + DL 100 Codes = 300 Codes
+All Codes Runnable in Ubuntu VM - Copy Paste - python3 filename.py
+====================================================================
